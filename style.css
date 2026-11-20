@@ -1,0 +1,243 @@
+/* ---------- Sam's profile: your orange + leafy green, with extra cute ---------- */
+
+:root {
+	--orange: #FA8128;
+	--green: #32612D;
+	--leaf: #4E7A1F;
+	--cream: #F5F5DC;
+	--butter: #FFE59A;
+	--peach: #FFD9B0;
+}
+
+body {
+	background-color: floralwhite;
+	background-image: radial-gradient(#FFD9B0 1.5px, transparent 1.5px);
+	background-size: 24px 24px;
+	margin: 0;
+}
+
+/* ---------- Header ---------- */
+
+header {
+	background-color: var(--cream);
+	text-align: center;
+	padding: 20px 20px 36px;
+	border-bottom: 4px dashed var(--orange);
+}
+
+h1 {
+	color: var(--leaf);
+	font-family: 'Sunshiney','Segoe Script',cursive;
+	font-size: 3rem;
+	text-shadow: 3px 3px 0 #fff;
+}
+
+h2 {
+	color: var(--orange);
+	font-family: 'Nanum Pen Script','Comic Sans MS',cursive;
+	font-size: 2rem;
+}
+
+/* ---------- Sections: sketchbook pages ---------- */
+
+section {
+	position: relative;
+	background-color: #fffdf8;
+	margin: 20px;
+	padding: 24px 20px 20px;
+	border: 2px dashed var(--orange);
+	border-radius: 18px;
+	box-shadow: 5px 5px 0 rgba(250, 129, 40, 0.2);
+}
+
+h3 {
+	color: var(--green);
+	font-family: 'Sunshiney','Segoe Script',cursive;
+	font-size: 2rem;
+	text-decoration: underline wavy var(--orange);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 8px;
+}
+
+p {
+	color: var(--green);
+	font-family: 'Nanum Pen Script','Comic Sans MS',cursive;
+	font-size: 1.4rem;
+	line-height: 1.5;
+	text-align: justify;
+}
+
+h4 {
+	color: var(--orange);
+	font-family: 'Sunshiney','Segoe Script',cursive;
+	font-size: 1.7rem;
+}
+
+h5 {
+	color: var(--green);
+	font-family: 'Sunshiney','Segoe Script',cursive;
+	font-size: 1.5rem;
+	margin: 0 0 8px;
+}
+
+/* ---------- About me ---------- */
+
+.about-me {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	margin: 20px;
+	padding: 15px;
+}
+
+.about-me img {
+	width: 30%;
+	height: auto;
+	border: 5px solid var(--orange);
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 18px;
+	box-shadow: 5px 5px 0 var(--butter);
+}
+
+.about-me p {
+	flex: 1;
+	text-align: justify;
+}
+
+/* ---------- Things I love: stickers ---------- */
+
+ul {
+	color: var(--green);
+	font-family: 'Nanum Pen Script','Comic Sans MS',cursive;
+	font-size: 1.4rem;
+	list-style: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+li {
+	margin-bottom: 0;
+	padding: 2px 16px;
+	background: var(--butter);
+	border: 2px solid var(--orange);
+	border-radius: 999px;
+}
+
+li:nth-child(3n + 1) { background: var(--peach); }
+li:nth-child(odd) { transform: rotate(-1.5deg); }
+li:nth-child(even) { transform: rotate(1.5deg); }
+
+/* ---------- Galleries: polaroids ---------- */
+
+.my-art-gallery,
+.my-edits {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	margin: 24px 0;
+}
+
+.my-art-gallery img,
+.my-edits img {
+	width: 30%;
+	height: 250px;
+	object-fit: contain; /* keeps your artworks uncropped */
+	background: #fff;
+	padding: 10px 10px 34px;
+	border: 1px solid var(--peach);
+	box-shadow: 4px 5px 0 rgba(50, 97, 45, 0.18);
+	transition: transform 0.25s ease;
+}
+
+.my-art-gallery img:nth-child(odd),
+.my-edits img:nth-child(odd) { transform: rotate(-2.5deg); }
+
+.my-art-gallery img:nth-child(even),
+.my-edits img:nth-child(even) { transform: rotate(2deg); }
+
+.my-art-gallery img:hover,
+.my-edits img:hover { transform: rotate(0) scale(1.04); }
+
+/* ---------- Aside: sticky note ---------- */
+
+aside {
+	max-width: 420px;
+	margin: 20px auto;
+	padding: 14px 20px 4px;
+	background: var(--butter);
+	transform: rotate(-1.5deg);
+	box-shadow: 5px 6px 0 rgba(50, 97, 45, 0.18);
+	border-bottom-right-radius: 28px 12px;
+}
+
+aside p {
+	text-align: left;
+	line-height: 1.3;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+	background-color: var(--cream);
+	margin-top: 40px;
+	padding: 20px 20px 30px;
+	text-align: center;
+	border-top: 4px dashed var(--orange);
+}
+
+footer h3 { margin-top: 0; }
+
+footer p { text-align: center; }
+
+footer a {
+	color: var(--orange);
+	text-underline-offset: 4px;
+}
+
+footer a:hover { color: var(--leaf); }
+
+a:focus-visible {
+	outline: 3px solid var(--green);
+	outline-offset: 3px;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+	section {
+		margin: 10px;
+		padding: 20px 15px 15px;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	.about-me {
+		flex-direction: column;
+	}
+
+	.about-me img {
+		width: 70%;
+	}
+
+	.my-art-gallery,
+	.my-edits {
+		flex-direction: column;
+	}
+
+	.my-art-gallery img,
+	.my-edits img {
+		width: 80%;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* { transition: none !important; }
+}
